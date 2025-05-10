@@ -261,7 +261,7 @@ const Index = () => {
           </div>
           <div className="relative rounded-lg overflow-hidden shadow-xl animate-scale-in">
             <img
-              src="public/lovable-uploads/l2.jpeg"
+              src="lovable-uploads/l2.jpeg"
               alt="Student working on a laptop"
               className="w-full h-full object-cover"
             />
