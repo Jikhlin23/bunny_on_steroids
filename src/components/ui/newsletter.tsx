@@ -30,6 +30,7 @@ export default function NewsletterSection() {
         setStatus("Something went wrong.");
       }
     } catch (err) {
+      console.error("Subscription error:", err);
       setStatus("Error submitting email.");
     }
   };

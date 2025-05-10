@@ -6,7 +6,7 @@ const imageList = [
   "/lovable-uploads/p4.jpeg",
   "/lovable-uploads/p6.jpeg",
   "/lovable-uploads/p3.jpeg",
-  "/lovable-uploads/sq1.jpeg",
+  "/lovable-uploads/sq1.png",
 ];
 
 export default function HeroBackground() {
