@@ -99,35 +99,37 @@ const Contact = () => {
       return;
     }
 
-    setIsSubmitting(true);
-
-    // Create mailto link as fallback
+    // Create mailto link
     const mailtoLink = `mailto:jikhlin23@gmail.com?subject=${encodeURIComponent(
       formData.subject
     )}&body=${encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
     )}`;
 
-    // Simulate form submission
+    // Show sending state briefly for UI feedback
+    setIsSubmitting(true);
+    
+    // Brief timeout to show the sending state
     setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: "Message Sent!",
-        description:
-          "Thank you for reaching out. I'll get back to you as soon as possible.",
-      });
-
-      // Open mailto link as fallback
+      // Open email client with the mailto link
       window.location.href = mailtoLink;
-
-      // Reset form
+      
+      setIsSubmitting(false);
+      
+      // Show toast notification
+      toast({
+        title: "Email Client Opened",
+        description: "Your default email application has been opened with your message.",
+      });
+      
+      // Optional: Reset form after successful submission
       setFormData({
         name: "",
         email: "",
         subject: "",
         message: "",
       });
-    }, 1500);
+    }, 500);
   };
 
   return (
